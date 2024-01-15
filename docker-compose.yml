@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: hospital_mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: hospital_billing
+    volumes:
+      - mongo_data:/data/db
+      - ./scripts/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+
+  backend:
+    build: ./backend
+    container_name: hospital_backend
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/hospital_billing
+      - TIMEZONE=America/Mexico_City
+      - NODE_ENV=production
+    depends_on:
+      - mongodb
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  frontend:
+    build: ./frontend
+    container_name: hospital_frontend
+    ports:
+      - "3001:3000"
+    depends_on:
+      - backend
+
+  data-processor:
+    build: ./data-processor
+    container_name: hospital_processor
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/hospital_billing
+      - TIMEZONE=America/Mexico_City
+    depends_on:
+      - mongodb
+    volumes:
+      - ./data-processor:/app
+
+volumes:
+  mongo_data:
