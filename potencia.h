@@ -1,11 +1,14 @@
-// potencia.h
+#include <iostream>
+#include "potencia.h"
 
-#ifndef POTENCIA_H
-#define POTENCIA_H
+int main() {
+    float f = 2.0f;
+    double d = 3.0;
+    long double ld = 4.0;
 
-#include <math.h>
+    std::cout << "float: 2^3 = " << potencia(f, 3.0f) << std::endl;
+    std::cout << "double: 2^3 = " << potencia(d, 3.0) << std::endl;
+    std::cout << "long double: 2^3 = " << potencia(ld, 3.0L) << std::endl;
 
-int potencia(int base, int exponente);
-double potencia_double(double base, double exponente);
-
-#endif // POTENCIA_H
+    return 0;
+}
