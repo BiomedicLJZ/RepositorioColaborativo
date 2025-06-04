@@ -3,11 +3,9 @@
 #ifndef POTENCIA_H
 #define POTENCIA_H
 
-// Calcula la base elevado al exponente
-int potencia(int base, int exponente);
+#include <math.h>
 
-// Para números flotantes
+int potencia(int base, int exponente);
 double potencia_double(double base, double exponente);
 
 #endif // POTENCIA_H
-
