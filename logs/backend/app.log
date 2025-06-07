@@ -1,0 +1,13 @@
+2024-03-20T08:00:01Z [INFO] Server started on port 3000
+2024-03-20T08:00:01Z [INFO] Connected to MongoDB
+2024-03-20T08:15:23Z [INFO] GET /api/billing/today - 200 OK (45ms)
+2024-03-20T08:15:23Z [INFO] Buscando facturas entre 2024-03-20T06:00:00.000Z y 2024-03-20T05:59:59.999Z
+2024-03-20T08:15:23Z [INFO] Encontradas 0 facturas
+2024-03-20T08:30:45Z [INFO] GET /api/billing/today - 200 OK (38ms)
+2024-03-20T08:30:45Z [INFO] Buscando facturas entre 2024-03-20T06:00:00.000Z y 2024-03-20T05:59:59.999Z
+2024-03-20T08:30:45Z [INFO] Encontradas 0 facturas
+2024-03-20T09:00:12Z [INFO] GET /health - 200 OK (2ms)
+2024-03-20T09:15:33Z [WARNING] Slow query detected: billing collection scan took 890ms
+2024-03-20T09:30:21Z [INFO] GET /api/billing/today - 200 OK (52ms)
+2024-03-20T09:30:21Z [INFO] Buscando facturas entre 2024-03-20T06:00:00.000Z y 2024-03-20T05:59:59.999Z
+2024-03-20T09:30:21Z [INFO] Encontradas 0 facturas

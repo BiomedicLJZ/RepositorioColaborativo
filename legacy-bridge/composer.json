@@ -1,0 +1,14 @@
+{
+    "name": "vitaltrack/legacy-bridge",
+    "description": "Bridge to legacy hospital systems",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "mongodb/mongodb": "^1.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "VitalTrack\\": "src/"
+        }
+    }
+}

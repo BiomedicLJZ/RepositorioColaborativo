@@ -1,0 +1,4 @@
+2024-03-20T08:00:00.123Z I NETWORK  [listener] Listening on 0.0.0.0:27017
+2024-03-20T08:00:01.456Z I NETWORK  [conn1] received client metadata from backend container
+2024-03-20T08:15:23.789Z I COMMAND  [conn1] command hospital_billing.billings command: find { billingDate: { $gte: new Date(1710918000000), $lte: new Date(1710917999999) } } planSummary: IXSCAN { billingDate: 1 } keysExamined:0 docsExamined:0 numReturned:0 reslen:20 locks:{ Global: { acquireCount: { r: 1 } } } 45ms
+2024-03-20T08:30:45.321Z I COMMAND  [conn1] command hospital_billing.billings command: find { billingDate: { $gte: new Date(1710918000000), $lte: new Date(1710917999999) } } planSummary: IXSCAN { billingDate: 1 } keysExamined:0 docsExamined:0 numReturned:0 reslen:20 locks:{ Global: { acquireCount: { r: 1 } } } 38ms
