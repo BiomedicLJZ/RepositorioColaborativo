@@ -26,9 +26,6 @@ Como detective del código, debes:
 - Base de datos MongoDB
 - **SOLO HERRAMIENTAS DE LÍNEA DE COMANDOS**
 
-### Límite de Tiempo
-**4 horas** para resolver el caso completo.
-
 ## 🔍 Pistas Iniciales
 
 - El problema empezó después del deployment del viernes

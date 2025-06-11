@@ -18,13 +18,13 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - MONGODB_URI=mongodb://mongodb:27017/hospital_billing
-      - TIMEZONE=America/Mexico_City
-      - NODE_ENV=production
+      MONGODB_URI: mongodb://mongodb:27017/hospital_billing
+      TIMEZONE: America/Mexico_City
+      NODE_ENV: production
     depends_on:
       - mongodb
     volumes:
-      - ./backend:/app
+      - ./backend:/app:cached
       - /app/node_modules
 
   frontend:
@@ -39,12 +39,13 @@ services:
     build: ./data-processor
     container_name: hospital_processor
     environment:
-      - MONGODB_URI=mongodb://mongodb:27017/hospital_billing
-      - TIMEZONE=America/Mexico_City
+      MONGODB_URI: mongodb://mongodb:27017/hospital_billing
+      TIMEZONE: America/Mexico_City
     depends_on:
       - mongodb
     volumes:
-      - ./data-processor:/app
+      - ./data-processor:/app:cached
 
 volumes:
   mongo_data:
+
