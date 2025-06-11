@@ -1,0 +1,10 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Fusion Project Monitoring",
+    "timezone": "browser",
+    "panels": [],
+    "schemaVersion": 30,
+    "version": 1
+  }
+}
